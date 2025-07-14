@@ -26,7 +26,7 @@ var config = {
             hidden: false,
             title: '',
             description: 'DH2025 Conference <br> July 2025 <br> Lisbon, Portugal',
-            image: './assets/dh2025-logo.jpg',
+           // image: './assets/dh2025-logo.jpg',
             location: {
                 center: [-74.33876, 4.65135],
                 zoom: 4.25,
