@@ -1,9 +1,9 @@
 var config = {
-    // style: 'mapbox://styles/mapbox/streets-v12',
+    style: 'mapbox://styles/laurisasastoque/cmd2yxve1064k01shep6435g3',
     // leave commented to use Mapbox Standard Style
-    accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN',
-    showMarkers: true,
-    markerColor: '#3FB1CE',
+    accessToken: 'pk.eyJ1IjoibGF1cmlzYXNhc3RvcXVlIiwiYSI6ImNtMmVzbHF4eTAxaWgyaXNhOTl2OWwwamMifQ.X7SLXCfwa4HQTpoaCg2nDw',
+    showMarkers: false,
+    markerColor: '#d2cbcb',
     //projection: 'equirectangular',
     //Read more about available projections here
     //https://docs.mapbox.com/mapbox-gl-js/example/projections/
@@ -12,62 +12,113 @@ var config = {
         markerColor: 'orange'
     },
     insetPosition: 'bottom-right',
-    theme: 'dark',
+    theme: 'light',
     use3dTerrain: false, //set true for enabling 3D maps.
     auto: false,
-    title: 'Your Title Goes Here',
-    subtitle: 'The Storytelling Template helps you create an awesome animated map story with ease.',
-    byline: 'By a I.M. Amapper',
-    footer: 'Source: source citations, etc. <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
+    title: 'Counter-Mapping Diaspora and Crime',
+    subtitle: 'A Digital Study of Colombian Spatialities in New York and London',
+    byline: 'By Laurisa Sastoque',
+    footer: '<a href="https://docs.google.com/presentation/d/1Ohap8dLFfNERPKzDDULhDtYHV3tMhIdYNbrtKN366mc/edit?usp=sharing">For Sources and Contact</a> <br> Created using <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling</a> template.',
     chapters: [
         {
-            id: 'slug-style-id',
+            id: 'intro',
             alignment: 'left',
             hidden: false,
-            title: 'San Francisco',
-            image: './assets/san-fran.jpeg',
-            description: 'The first chapter contains a title, image, and camera view for San Francisco, California. Update the chapter data to make it your own.',
+            title: '',
+            description: 'DH2025 Conference <br> July 2025 <br> Lisbon, Portugal',
+            image: './assets/dh2025-logo.jpg',
             location: {
-                center: [-122.418398, 37.759483],
-                zoom: 8.5,
-                pitch: 60,
-                bearing: 0
+                center: [-74.33876, 4.65135],
+                zoom: 4.25,
+                pitch: 0,
+                bearing: 0.00
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
-            ],
-            onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
-            ]
+            onChapterEnter: [],
+            onChapterExit: [],
         },
         {
-            id: 'second-identifier',
-            alignment: 'right',
+            id: 'colombia1',
+            alignment: 'center',
             hidden: false,
-            title: 'Washington, D.C.',
-            image: './assets/washington-dc.jpg',
-            description: 'The second chapter flies to Washington, D.C., updates the camera pitch, and slowly rotates. <br>  <br> Washington, D.C., the capital of the United States, is a vibrant city known for its iconic landmarks, including the White House, the U.S. Capitol, and the Washington Monument. It serves as the political heart of the nation and a center for history, culture, and international diplomacy.',
+            title: 'The Media and Spatial Narratives',
+            description: 'When it comes to the representations of Colombians abroad, few have done justice to the variety of roles that migrants have fulfilled and the histories that they have experienced.',
+            image: './assets/spatial-narratives.png',
             location: {
-                center: [-77.020636, 38.886900],
-                zoom: 8.5,
-                pitch: 60,
-                bearing: -43.2,
-                // flyTo additional controls-
-                // These options control the flight curve, making it move
-                // slowly and zoom out almost completely before starting
-                // to pan.
-                //speed: 2, // make the flying slow
-                //curve: 1, // change the speed at which it zooms out
+                center: [-74.33876, 4.65135],
+                zoom: 6.25,
+                pitch: 0,
+                bearing: 0.00,
+                speed: 0.5
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: [],
+        },
+        {
+            id: 'us',
+            alignment: 'center',
+            hidden: false,
+            title: 'The Effects of Hegemonic Discourse',
+            description: `
+            <ul>
+                <li>Social fragmentation (Guarnizo, et al., 1999)</li>
+                <li>“Good” Colombians vs. “bad” Colombians, and</li>
+                <li>Aspirational whiteness (Ochoa Camacho, 2016)</li>
+                <li>A spatial representation that does not reproduce power relations?</li>
+            </ul>
+        `,
+            image: './assets/hegemonic-discourse.png',
+            location: {
+                center: [-89.57439, 31.38369],
+                zoom: 5.79,
+                pitch: 0,
+                bearing: 0.00,
+                speed: 0.5
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'layering',
+            alignment: 'center',
+            hidden: false,
+            title: 'Methodology: A Process of Layering',
+            description: '',
+            image: './assets/layering.png',
+            location: {
+                center: [-89.57439, 31.38369],
+                zoom: 5.79,
+                pitch: 42,
+                bearing: 0.00,
+                speed: 0.05,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'example',
+            alignment: 'center',
+            hidden: false,
+            title: '',
+            description: '',
+            image: './assets/example.png',
+            location: {
+                center: [-89.57439, 31.38369],
+                zoom: 5.79,
+                pitch: 42,
+                bearing: 0.00,
+                speed: 0.05,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: true,
@@ -76,17 +127,155 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'third-identifier',
+            id: 'jackson-heights',
             alignment: 'left',
             hidden: false,
-            title: 'Geneva',
-            image: './assets/geneva.jpg',
-            description: 'Geneva, Switzerland, is a picturesque city nestled along the shores of Lake Geneva, surrounded by the Alps and Jura mountains. Known as a global hub for diplomacy and finance, it is home to numerous international organizations, including the United Nations and the Red Cross.',
+            title: 'How does spatial criminalization take place?',
+            showMarkers: false,
+            image: './assets/jackson-heights.png',
+            description: 'Depicted: Jackson Heights, Queens, NYC',
             location: {
-                center: [6.15116, 46.20595],
-                zoom: 12.52,
-                pitch: 8.01,
-                bearing: 0.00
+                center: [-73.89534, 40.75543],
+                zoom: 13.21,
+                pitch: 42.50,
+                bearing: 0,
+                speed: 2, // make the flying slow
+                curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                 {
+                     layer: 'polygons-dh2025',
+                     opacity: 0.5,
+                     duration: 5000
+                 },
+                 {
+                    layer: 'vectors-dh2025',
+                    opacity: 0,
+                },
+                {
+                    layer: 'points-dh2025',
+                    opacity: 0,
+                },
+            ],
+            onChapterExit: [
+                 {
+                     layer: 'polygons-dh2025',
+                     opacity: 0
+                 }
+            ]
+        },
+        {
+            id: 'roosevelt-avenue',
+            alignment: 'left',
+            hidden: false,
+            title: '',
+            image: './assets/line7.png',
+            description: 'Depicted: Roosevelt Avenue, and Metro Line 7',
+            location: {
+                center: [-73.89534, 40.75543],
+                zoom: 13.21,
+                pitch: 42.50,
+                bearing: 0,
+                // flyTo additional controls-
+                // These options control the flight curve, making it move
+                // slowly and zoom out almost completely before starting
+                // to pan.
+                speed: 2, // make the flying slow
+                curve: 1, // change the speed at which it zooms out
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [
+                {
+                    layer: 'vectors-dh2025',
+                    opacity: 0.5,
+                    duration: 5000
+                }                
+            ],
+            onChapterExit: [
+                {
+                    layer: 'vectors-dh2025',
+                    opacity: 0
+                }              
+            ]
+        },
+        {
+            id: 'orlando',
+            alignment: 'left',
+            hidden: false,
+            title: 'Orlando Travel and Prevision Exequial',
+            image: './assets/tobon.png',
+            description: 'Depicted: Roosevelt Shopping Mall',
+            location: {
+                center: [-73.88031, 40.74795],
+                zoom: 16.14,
+                pitch: 36,
+                bearing: -178.36,
+                speed: 0.1
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+                    layer: 'polygons-dh2025',
+                    opacity: 0.5,
+                    duration: 5000
+                },
+                {
+                    layer: 'points-dh2025',
+                    opacity: 1,
+                    duration: 5000
+                },
+            ],
+            onChapterExit: []
+        },
+        {
+            id: 'london',
+            alignment: 'center',
+            hidden: false,
+            title: 'Colombian Spatialities in London',
+            image: './assets/london.png',
+            description: '',
+            location: {
+                center: [-0.19427, 51.50045],
+                zoom: 10.37,
+                pitch: 0,
+                bearing: 0,
+                speed: 0.5
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+                    layer: 'points-dh2025',
+                    opacity: 0
+                },
+                {
+                    layer: 'vectors-dh2025',
+                    opacity: 0
+                }
+            ],
+            onChapterExit: []
+        },
+        {
+            id: 'film',
+            alignment: 'left',
+            hidden: false,
+            title: 'Transnational/Translocal Colombians',
+            image: '',
+            description: 'Depicted: Brixton, Elephant & Castle, Seven Sisters',
+            location: {
+                center: [-0.19139, 51.51423],
+                zoom: 10.85,
+                pitch: 0,
+                bearing: 0,
+                speed: 0.5
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -95,23 +284,61 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'fourth-chapter',
-            alignment: 'fully',
+            id: 'translocal',
+            alignment: 'right',
             hidden: false,
-            title: 'Buenos Aires',
-            image: './assets/buenos-aires.jpg',
-            description: 'Buenos Aires, the capital of Argentina, is a dynamic city known for its European-inspired architecture, vibrant tango culture, and rich culinary scene. Often called the "Paris of South America," it blends historic charm with modern energy.  You can add as many chapters as you need, just copy the JSON data and make changes.',
+            title: '',
+            image: './assets/film-stills.png',
+            description: 'Depicted: Alba and Xiomara\'s Voyage',
             location: {
-                center: [-58.54195, -34.71600],
-                zoom: 4,
+                center: [-0.04750, 51.50730],
+                zoom: 11.29,
                 pitch: 0,
-                bearing: 0
+                bearing: 0,
+                speed: 0.5
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+                    layer: 'points-dh2025',
+                    opacity: 1,
+                    duration: 5000
+                },
+                {
+                    layer: 'vectors-dh2025',
+                    opacity: 1,
+                    duration: 5000
+                }
+            ],
+            onChapterExit: []
+        },
+        {
+            id: 'moving-forward',
+            alignment: 'centre',
+            hidden: false,
+            title: 'Moving Forward',
+            image: '',
+            description: `
+            <ul>
+                <li>Building out a map: what does a “counter-narrative” mean in each of these contexts? What visualizations/functionalities can help bring these forth?</li>
+                <li>How do we account for a global imaginary of drug trade criminality that nonetheless has specific and variable manifestations at the local level?</li>
+                <li>How can we continue to expand the data collection efforts that input data into the map?</li>
+            </ul>
+        `,
+            location: {
+                center: [-74.08349, 4.63402],
+                zoom: 4.35,
+                pitch: 0,
+                bearing: 0,
+                speed: 0.5
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
-        }
+        },
     ]
 };
